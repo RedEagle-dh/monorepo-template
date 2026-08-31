@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+.output/
+.nitro/
+.tanstack/
+
+# turbo
+.turbo/
+
+# env
+.env
+.env.*
+!.env.example
+
+# drizzle (keep migrations, they are committed by default; uncomment to ignore)
+# packages/db/drizzle/
+
+
+# misc
+.DS_Store
+*.log
+
+# nix / direnv
+.direnv/

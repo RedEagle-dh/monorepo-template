@@ -1,0 +1,9 @@
+**/node_modules
+**/dist
+**/.output
+**/.nitro
+**/.tanstack
+**/.turbo
+.git
+.env
+.env.*
