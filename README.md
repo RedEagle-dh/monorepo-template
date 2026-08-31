@@ -20,7 +20,9 @@ packages/
 
 ```bash
 nix develop            # or: direnv allow — provides bun, psql, redis-cli
-docker compose up -d   # postgres :5432 + redis :6381
+docker compose up -d                      # postgres :5432
+docker compose --profile cache up -d      # + redis :6381
+docker compose --profile observ up -d     # + glitchtip :8080, grafana lgtm :3030 (otlp :4317/:4319)
 cp .env.example .env   # fill BETTER_AUTH_SECRET (openssl rand -base64 32)
 bun install
 cd packages/db && bun run db:migrate && cd ../..
