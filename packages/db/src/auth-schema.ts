@@ -42,8 +42,6 @@ export const account = pgTable(
 	"account",
 	{
 		id: text("id").primaryKey(),
-		/** since better-auth 1.7 account identity is scoped by issuer */
-		issuer: text("issuer").notNull(),
 		accountId: text("account_id").notNull(),
 		providerId: text("provider_id").notNull(),
 		userId: text("user_id")

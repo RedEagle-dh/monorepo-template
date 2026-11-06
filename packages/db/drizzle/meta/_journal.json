@@ -8,6 +8,13 @@
       "when": 1788201326938,
       "tag": "0000_boring_lilandra",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793982279594,
+      "tag": "0001_drop_account_issuer",
+      "breakpoints": true
     }
   ]
 }

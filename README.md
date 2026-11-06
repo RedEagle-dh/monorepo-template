@@ -45,7 +45,7 @@ Cross-cutting concerns are two Elysia plugins — route authors declare, never w
 
 - **AuthN/AuthZ — whitelist, blocked by default.** Every route must declare
   `public: true` or `user: true`. Missing policy → the app refuses to boot
-  (`assertPolicies`) *and* answers `403 policy_missing` at runtime.
+  (`assertPolicies`) _and_ answers `403 policy_missing` at runtime.
 - **Caching** — `CachePort` (`src/infra/cache/port.ts`) with in-memory and
   Redis (Bun native client) adapters; Redis is picked when `REDIS_URL` is set.
   Namespace invalidation is an O(1) generation bump; the Redis adapter fails
