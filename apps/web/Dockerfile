@@ -1,12 +1,12 @@
 # Build from the repo root:
 #   docker build -f apps/web/Dockerfile -t web .
-FROM oven/bun:1.3-alpine AS base
+FROM oven/bun:1.4-alpine AS base
 
 # Prune the monorepo down to what the web app needs
 FROM base AS pruner
 WORKDIR /app
 COPY . .
-RUN bun x turbo@2.10.12 prune @repo/web --docker
+RUN bun x turbo@2.11.10 prune @repo/web --docker
 
 # Install from the pruned lockfile, then build
 FROM base AS builder

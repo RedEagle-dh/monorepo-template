@@ -15,4 +15,3 @@ Build the production app with:
 ```bash
 bun --bun run build
 ```
-
